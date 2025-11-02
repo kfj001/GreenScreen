@@ -1,12 +1,15 @@
 # GreenScreen
 
-This simulates a unix-like terminal using JavaScript, CSS & HTML.
+Simulates a unix-like terminal using HTML, CSS, and JavaScript.
 
-# Critical Files
-- `index.html` - the root and markup of the application.
-- `script.js` - the application's entrypoint.
-- `styles.css` - defines CSS styles and animations for the app. 
+## Critical files
+- `src/index.html` — application root and markup. See [src/index.html](src/index.html)
+- `src/scripts/script.js` — application entrypoint. See [src/scripts/script.js](src/scripts/script.js)
+- `src/css/styles.css` — styles and animations. See [src/css/styles.css](src/css/styles.css)
 
-# Frameworks
-- Foundation.js - a custom written abstraction for HTML interaction. Intended to only be used by the Terminus framework.
-- Terminus.js - a custom written abstraction for simulating the terminal like experience. Consumes Foundation.js
+## Frameworks
+- [`Foundation`](src/scripts/Foundation.js) — low-level DOM and animation utilities. See [src/scripts/Foundation.js](src/scripts/Foundation.js)
+- [`Terminus`](src/scripts/Terminus.js) — terminal simulation and REPL logic. See [src/scripts/Terminus.js](src/scripts/Terminus.js)
+
+## Notes
+- Open `src/index.html` in a browser to run the app.
