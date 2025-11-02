@@ -15,7 +15,7 @@
   "forwardPorts": [8080],
 
   // Start a simple Python HTTP server in the background when the container starts.
-  "postStartCommand": "cd /workspaces/${localWorkspaceFolderBasename} && nohup python3 -m http.server 8080 --bind 0.0.0.0",
+  "postStartCommand": "cd /workspaces/${localWorkspaceFolderBasename}/src && nohup python3 -m http.server 8080 --bind 0.0.0.0",
 
   // Make the local workspace path available in the container environment if needed
   "remoteEnv": {
