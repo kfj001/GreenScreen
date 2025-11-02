@@ -12,4 +12,5 @@ Simulates a unix-like terminal using HTML, CSS, and JavaScript.
 - [`Terminus`](src/scripts/Terminus.js) — terminal simulation and REPL logic. See [src/scripts/Terminus.js](src/scripts/Terminus.js)
 
 ## Notes
-- Open `src/index.html` in a browser to run the app.
+- When running inside a Devcontainer, on the successful launch of the container, a small web server will be launched with the contents of `src/` at http://localhost:8080. 
+- Otherwise Open `src/index.html` in a browser to run the app.
