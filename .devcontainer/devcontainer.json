@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. Comments are allowed (JSONC).
+{
+  "name": "GreenScreen (devcontainer with built-in server)",
+
+  // Build the devcontainer image from the provided Dockerfile in this folder
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolderBasename}"
+    }
+  },
+
+  // Port inside the container where the tiny web server will run. We choose 8080
+  // to avoid needing root privileges inside the container.
+  "forwardPorts": [8080],
+
+  // Start a simple Python HTTP server in the background when the container starts.
+  "postStartCommand": "cd /workspaces/${localWorkspaceFolderBasename} && nohup python3 -m http.server 8080 --bind 0.0.0.0",
+
+  // Make the local workspace path available in the container environment if needed
+  "remoteEnv": {
+    // Expose the workspace folder name (basename) rather than the full path
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolderBasename}"
+  },
+  "portsAttributes": {
+    "8080": {
+      "label": "Greenscreen Web App"
+    }
+  }
+}
