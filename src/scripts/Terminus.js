@@ -128,11 +128,12 @@ export class Terminus {
     }
 
     async _doScramblybugs() {
-        this.foundation.writeLine({ text: 'scramblybugs started', className: 'info' }, true, {});
-        this.scramblyInterval = setInterval(() => {
+        this.foundation.writeLine('scramblybugs started');
+        setInterval(() => {
             const n = Math.floor(Math.random() * 1_000_000_000);
-            this.foundation.writeLine(String(n), false, {});
+            this.foundation.writeLine(String((n)));
         }, 100);
+        sleep(Infinity);
     }
 
     async _doTest() {
