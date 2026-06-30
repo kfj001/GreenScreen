@@ -2,6 +2,8 @@
 
 Simulates a unix-like terminal using HTML, CSS, and JavaScript.
 
+![GreenScreen Terminal](Screenshot_29-6-2026_221718_localhost.jpeg)
+
 ## Critical files
 - `src/index.html` — application root and markup. See [src/index.html](src/index.html)
 - `src/scripts/script.js` — application entrypoint. See [src/scripts/script.js](src/scripts/script.js)
